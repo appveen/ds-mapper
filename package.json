@@ -1,5 +1,5 @@
 {
-  "name": "ds-mapper",
+  "name": "@appveen/data-mapper",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
