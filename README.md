@@ -59,6 +59,10 @@ The Mapping JSON Contains a data path, This data path follows LoDash Library Dat
 
 User can write a JS code block in the formula to do much more.
 
+## Example
+
+Check example.js in the repo.
+
 ## LICENSE
 MIT
 
