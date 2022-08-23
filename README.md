@@ -17,7 +17,7 @@ const Mapper = require("@appveen/data-mapper");
 
 const mappings = [....]; // Mapping JSON
 
-  const mapper = new Mapper(mappings, {
+  const mapper = new Mapper('first-mapper', mappings, {
     //Additional Libraries or Objects you want to use
   });
 
@@ -64,5 +64,5 @@ User can write a JS code block in the formula to do much more.
 Check example.js in the repo.
 
 ## LICENSE
-MIT
 
+MIT
