@@ -4,15 +4,19 @@ const { v4: uuid } = require('uuid');
 const _ = require('lodash');
 
 
-function Mapper(mappings, options) {
+function Mapper(name, mappings, options) {
+    this.name = name;
     this.options = options;
     this.mappings = mappings;
+    if (!this.name) {
+        this.name = 'mapper_' + Date.now();
+    }
     const code = genrateCode(mappings, options);
-    writeFileSync(path.join(__dirname, 'mapper.js'), code, 'utf-8');
+    writeFileSync(path.join(__dirname, this.name + '.js'), code, 'utf-8');
 }
 
 Mapper.prototype.convert = async function (inputJSON) {
-    const json = await require('./mapper.js')(inputJSON, this.options);
+    const json = await require('./' + this.name + '.js')(inputJSON, this.options);
     return json;
 };
 
